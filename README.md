@@ -32,3 +32,5 @@ sudo LOGV=1 ./CXLMemSim -t ./microbench/ld_base32 -i 5 -c 0,2 -d 85 -b 10,10 -l 
                   3
 ```
 9. env LOGV stands for logs level that you can see.
+
+Ming
