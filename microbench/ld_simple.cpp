@@ -55,6 +55,7 @@
 int
 main(int argc, const char *argv[])
 {
+    std::cout << "LD_SIMPLE_TRIGGERED!" << "\n";
     // Cache line size in bytes.
     const int kLineSize = 64;
     // Number of cache lines skipped by the stream every iteration.
@@ -83,7 +84,7 @@ main(int argc, const char *argv[])
       //__builtin_prefetch(&buffer[position + prefetch_distance], 0, 0);
 
         position += (buffer[position] * kLineSize);
-	position = loop;
+	//position = loop;
         position &= (kArraySize - 1);
     }
 

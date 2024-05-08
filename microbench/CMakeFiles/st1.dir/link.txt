@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/st1.dir/st.o -o st1

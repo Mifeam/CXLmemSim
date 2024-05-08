@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
 
   asm volatile ("mfence\n" :::);
 
-  clock_gettime(CLOCK_MONOTONIC, &tstart);
+  for (int i=0;i<1e1;i++){clock_gettime(CLOCK_MONOTONIC, &tstart);
   addr = base;
   while (addr < (base + MAP_SIZE)) {
     //fprintf (stderr, "addr %p bound %p\n", addr, base + MAP_SIZE);
@@ -112,5 +112,6 @@ int main(int argc, char **argv) {
 
 
   printf("%lu\n", nanos);
+  }
   return 0;
 }

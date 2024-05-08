@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ld128.dir/ld.o -o ld128

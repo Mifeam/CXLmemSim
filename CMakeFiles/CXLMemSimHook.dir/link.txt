@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wall -fPIC -pthread -ldl -lrt -mavx512f -mpreferred-stack-boundary=4 -g -O0 -shared -Wl,-soname,libCXLMemSimHook.so -o libCXLMemSimHook.so CMakeFiles/CXLMemSimHook.dir/src/module.cc.o

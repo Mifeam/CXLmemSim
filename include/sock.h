@@ -20,7 +20,7 @@ struct op_data {
     uint32_t tid;
     uint32_t opcode;
 };
-#define SOCKET_PATH "/tmp/cxl_mem_simulator.sock"
+#define SOCKET_PATH "/tmp/cxl_mem_simulatorming.sock"
 #define OUTPUT_PMU_PATH "./output_pmu.csv"
 
 #ifdef __cplusplus

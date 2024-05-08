@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/calloc.dir/calloc.o -o calloc

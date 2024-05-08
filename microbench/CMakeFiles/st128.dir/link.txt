@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/st128.dir/st.o -o st128

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/st256.dir/st.o -o st256

@@ -1,0 +1,5 @@
+/users/Ming589/CXLMemSim/CMakeFiles/CXLMemSim.dir
+/users/Ming589/CXLMemSim/CMakeFiles/CXLMemSimHook.dir
+/users/Ming589/CXLMemSim/CMakeFiles/CXLMemSimSock.dir
+/users/Ming589/CXLMemSim/CMakeFiles/edit_cache.dir
+/users/Ming589/CXLMemSim/CMakeFiles/rebuild_cache.dir

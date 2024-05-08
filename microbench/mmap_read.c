@@ -20,7 +20,7 @@ int main(int argc, const char *const *argv) {
         printf("argv[%d] = %s\n", i, argv[i]);
     }
 
-    size_t mbcount = 100;
+    size_t mbcount = 10;
 
     use_mmap = true;
 

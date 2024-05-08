@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/sbrk.dir/sbrk.o -o sbrk

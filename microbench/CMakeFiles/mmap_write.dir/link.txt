@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/mmap_write.dir/mmap_write.o -o mmap_write

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ld1.dir/ld.o -o ld1

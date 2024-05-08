@@ -9,7 +9,7 @@ PerfInfo::PerfInfo(int group_fd, int cpu, pid_t pid, unsigned long flags, struct
     : group_fd(group_fd), cpu(cpu), pid(pid), flags(flags), attr(attr) {
     this->fd = perf_event_open(&this->attr, this->pid, this->cpu, this->group_fd, this->flags);
     if (this->fd == -1) {
-        LOG(ERROR) << "perf_event_open";
+        LOG(ERROR) << "perf_event_open2";
         throw;
     }
     ioctl(this->fd, PERF_EVENT_IOC_RESET, 0);

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ld256.dir/ld.o -o ld256

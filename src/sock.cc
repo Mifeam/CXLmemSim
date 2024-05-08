@@ -38,6 +38,7 @@ int main() {
     addr.sun_family = AF_UNIX;
     strcpy(addr.sun_path, SOCKET_PATH);
     remove(addr.sun_path);
+    std::cout << " bind " << SOCKET_PATH << "\n";
     if (bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1) { // can be blocked for multi thread
         LOG(ERROR) << "Failed to execute. Can't bind to a socket.\n";
         exit(1);

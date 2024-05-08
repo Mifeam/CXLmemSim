@@ -45,7 +45,8 @@ PEBS::PEBS(pid_t pid, uint64_t sample_period) : pid(pid), sample_period(sample_p
 
     this->fd = perf_event_open(&pe, pid, cpu, group_fd, flags);
     if (this->fd == -1) {
-        perror("perf_event_open");
+        LOG(DEBUG) << getpid() << " " << &pe << " " << pid << " " << cpu << " " << group_fd << " " << flags << "\n";
+        perror("perf_event_open1");
         throw;
     }
 
@@ -72,7 +73,7 @@ int PEBS::read(CXLController *controller, struct PEBSElem *elem) {
     struct perf_sample *data;
     uint64_t last_head;
     char *dp = ((char *)mp) + PAGE_SIZE;
-
+    LOG(DEBUG) << this->pid << "   " << data->pid << "   " << "line: 76\n";
     do {
         this->seq = mp->lock; // explicit copy
         barrier();

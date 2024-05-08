@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/ld8.dir/ld.o -o ld8

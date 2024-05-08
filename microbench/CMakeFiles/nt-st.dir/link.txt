@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic "CMakeFiles/nt-st.dir/nt-st.o" -o nt-st

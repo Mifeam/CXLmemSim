@@ -129,10 +129,14 @@ int main(int argc, char *argv[]) {
 
     /** Hove been got by socket if it's not main thread and synchro */
     sock = socket(AF_UNIX, SOCK_DGRAM, 0);
+    memset(&addr, 0, sizeof(addr));
     addr.sun_family = AF_UNIX;
-    strcpy(addr.sun_path, SOCKET_PATH);
+    //strcpy(addr.sun_path, SOCKET_PATH);
+    strncpy(addr.sun_path, SOCKET_PATH, sizeof(addr.sun_path) - 1);
     remove(addr.sun_path);
+    LOG(DEBUG) << " Value of errno is : " << SOCKET_PATH << strerror(errno) << '\n';
     if (bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1) { // can be blocked for multi thread
+    LOG(DEBUG) << " Value of errno is : " << strerror(errno) << '\n';
         LOG(ERROR) << "Failed to execute. Can't bind to a socket.\n";
         exit(1);
     }
@@ -169,11 +173,17 @@ int main(int argc, char *argv[]) {
     /** Create target process */
     Helper::detach_children();
     auto t_process = fork();
+    LOG(DEBUG) << getpid() << "\n";
     if (t_process < 0) {
         LOG(ERROR) << "Fork: failed to create target process";
         exit(1);
     } else if (t_process == 0) {
-        execv(filename, args); // taskset in lpace
+        unsigned int microsecond = 1000;
+        //usleep(1*1000 * microsecond);//sleeps for 3 second
+        LOG(DEBUG) << filename << "   " << args << "\n";
+        LOG(DEBUG) << " Value of errno is : " << strerror(errno) << '\n';
+        int test_param = execv(filename, args); // taskset in lpace
+        LOG(DEBUG) << test_param << " Value of errno is : " << strerror(errno) << '\n';
         LOG(ERROR) << "Exec: failed to create target process\n";
         exit(1);
     }
